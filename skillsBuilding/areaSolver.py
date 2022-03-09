@@ -1,3 +1,4 @@
+from ast import Pass
 from calendar import c
 import math
 
@@ -12,7 +13,7 @@ def area_solver():
     #loop from here?
     print("\nArea and perimeter solver \n")
     print("Please choose by entering one of the following choices \n")
-    print("Triangle \nCircle \nSquare \nRectangle \nParallelogram \nFinish Calculation")
+    print("Triangle \nCircle \nSquare \nRectangle \nParallelogram \nFinish Calculation \n")
     print("Please enter all dimensions in cm \n")
     
     choice = input("Please enter your choice here: ")
@@ -22,14 +23,18 @@ def area_solver():
         print("\nYou chose triangle")
         print("Please enter the dimensions for your shape \n")
         
-        try:
-            triangleHeight = int(input("Height: "))
-            triangleBase = int(input("Base: "))
-        except:
-            print("Please only enter an integer")
+        while True:
+            try:
+                triangleHeight = int(input("Height: "))
+                triangleBase = int(input("Base: "))
+
+                break
+            except:
+                print("Please only enter an integer")
 
         triangle_area = (triangleHeight * triangleBase) / 2
-        triangle_perimeter = math.sqrt((triangleHeight * triangleHeight) + (triangleBase * triangleBase))
+        hypo = math.sqrt((triangleHeight * triangleHeight) + (triangleBase * triangleBase))
+        triangle_perimeter = hypo + triangleBase + triangleHeight
 
         triangle_area = str(triangle_area)
         triangle_perimeter = str(triangle_perimeter)
@@ -37,14 +42,19 @@ def area_solver():
         print("\nPerimeter of the triangle is " + triangle_perimeter)        
         print("Area of the triangle is " + triangle_area + "\n")
 
+            
+
     elif choice == "circle":
-        print("You chose circle")
+        print("\nYou chose circle")
         print("Please enter the dimensions for your shape")
 
-        try:
-            radius = int(input("Radius: "))
-        except:
-            print("Please only enter an integer")
+        while True:
+            try:
+                radius = int(input("Radius: "))
+
+                break
+            except:
+                print("Please only enter an integer")
 
         circleArea = (radius * radius) * math.pi
         circumference = 2 * radius * math.pi
@@ -57,13 +67,16 @@ def area_solver():
 
 
     elif choice == "square":
-        print("You chose square")
+        print("\nYou chose square")
         print("Please enter the dimensions for your shape")
 
-        try:
-            squareSide = int(input("Side: "))
-        except:
-            print("Please only enter an integer")
+        while True:
+            try:
+                squareSide = int(input("Side: "))
+
+                break
+            except:
+                print("Please only enter an integer")
 
         square_area = squareSide * squareSide
         square_perimeter = squareSide * 4
@@ -75,14 +88,17 @@ def area_solver():
         print("Area of the square is " + square_area)
     
     elif choice == "rectangle":
-        print("You chose rectangle")
+        print("\nYou chose rectangle")
         print("Please enter the dimensions for your shape")
 
-        try:
-            recWidth = int(input("Width: "))
-            recLength = int(input("length: "))
-        except:
-            print("Please only enter an integer")
+        while True:
+            try:
+                recWidth = int(input("Width: "))
+                recLength = int(input("length: "))
+
+                break
+            except:
+                print("Please only enter an integer")
 
         rec_area = recWidth * recLength
         rec_perimeter = (recWidth + recLength) * 2
@@ -93,16 +109,21 @@ def area_solver():
         print("Perimeter of the rectangle is " + rec_perimeter)        
         print("Area of the rectangle is " + rec_area)
     
+    elif choice == "finish calculation":
+        pass
     
     elif choice == "parallelogram":
-        print("You chose parallelogram")
+        print("\nYou chose parallelogram")
         print("Please enter the dimensions for your shape")
     
-        try:
-            parHeight = int(input("Height: "))
-            parBase = int(input("Base: "))
-        except:
-            print("Please only enter an integer")
+        while True:
+            try:
+                parHeight = int(input("Height: "))
+                parBase = int(input("Base: "))
+
+                break
+            except:
+                print("\nPlease only enter an integer \n")
 
         par_area = parHeight * parBase
         par_perimeter = (parHeight + parBase) * 2
@@ -117,5 +138,6 @@ def area_solver():
         print("Choice not found, please check your spelling")
 
 
-
-area_solver()
+while True:
+    area_solver()
+    
