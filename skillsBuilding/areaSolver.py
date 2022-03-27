@@ -28,8 +28,8 @@ def triangle_calculation():
     triangle_area = str(triangle_area)
     triangle_perimeter = str(triangle_perimeter)
 
-    print("\nPerimeter of the triangle is " + triangle_perimeter)        
-    print("Area of the triangle is " + triangle_area + "\n")
+    print("\nPerimeter of the triangle is " + triangle_perimeter + " cm")        
+    print("Area of the triangle is " + triangle_area  + " cm" + "\n")
 
     input("Press Enter to continue...")
 
@@ -52,8 +52,8 @@ def circle_calculation():
     circumference = str(circumference)
     circleArea = str(circleArea)
 
-    print("\nThe circumference is " + circumference)
-    print("Area of the circle is " + circleArea)
+    print("\nThe circumference is " + circumference + " cm")
+    print("Area of the circle is " + circleArea + " cm")
 
     input("\nPress Enter to continue...")
 
@@ -74,8 +74,8 @@ def square_calculation():
     square_area = str(square_area)
     square_perimeter = str(square_perimeter)
 
-    print("\nPerimeter of the square is " + square_perimeter)        
-    print("Area of the square is " + square_area)
+    print("\nPerimeter of the square is " + square_perimeter + " cm")        
+    print("Area of the square is " + square_area + " cm")
     
     input("Press Enter to continue...")
 
@@ -97,8 +97,8 @@ def rec_calculation():
     rec_area = str(rec_area)
     rec_perimeter = str(rec_perimeter)
 
-    print("\nPerimeter of the rectangle is " + rec_perimeter)        
-    print("Area of the rectangle is " + rec_area)
+    print("\nPerimeter of the rectangle is " + rec_perimeter + " cm")        
+    print("Area of the rectangle is " + rec_area + " cm")
     
     input("\nPress Enter to continue...")
 
@@ -120,8 +120,8 @@ def par_calculation():
     par_area = str(par_area)
     par_perimeter = str(par_perimeter)
 
-    print("\nPerimeter of the parallelogram is " + par_perimeter)        
-    print("Area of the parallelogram is " + par_area)
+    print("\nPerimeter of the parallelogram is " + par_perimeter + " cm")        
+    print("Area of the parallelogram is " + par_area + " cm")
 
     input("\nPress Enter to continue...")
 
