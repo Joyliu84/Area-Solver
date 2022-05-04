@@ -12,23 +12,32 @@ parallelogram = []
 def triangle_calculation():   
     print("Please enter all dimensions in cm \n")
 
+
     while True:
+
         try:
             triangleHeight = int(input("Height: "))
+            if triangleHeight <= 0:
+                print("Please enter a positive number")
+                continue
             triangleBase = int(input("Base: "))
-
+            if triangleBase <= 0:
+                print("Please enter a positive number")
+                continue
             break
         except:
-            print("Please only enter an wholenumber")
+            print("Please only enter a wholenumber")
+
+
       
     triangle_area = (triangleHeight * triangleBase) / 2
-    hypo = math.sqrt((triangleHeight * triangleHeight) + (triangleBase * triangleBase))
-    triangle_perimeter = hypo + triangleBase + triangleHeight
+    # hypo = math.sqrt((triangleHeight * triangleHeight) + (triangleBase * triangleBase))
+    # triangle_perimeter = hypo + triangleBase + triangleHeight
 
     triangle_area = str(triangle_area)
-    triangle_perimeter = str(triangle_perimeter)
+    # triangle_perimeter = str(triangle_perimeter)
 
-    print("\nPerimeter of the triangle is " + triangle_perimeter + " cm")        
+    # print("\nPerimeter of the triangle is " + triangle_perimeter + " cm")        
     print("Area of the triangle is " + triangle_area  + " cm" + "\n")
 
     input("Press Enter to continue...")
@@ -38,13 +47,17 @@ def triangle_calculation():
 def circle_calculation():
     print("\nPlease enter all dimensions in cm \n")
 
+
     while True:
         try:
             radius = int(input("Radius: "))
-
+            if radius <= 0:
+                print("Please enter a positive number")
+                continue
+            
             break
         except:
-            print("Please only enter an wholenumber")
+            print("Please only enter a wholenumber")
 
     circleArea = (radius * radius) * math.pi
     circumference = 2 * radius * math.pi
@@ -63,10 +76,12 @@ def square_calculation():
     while True:
         try:
             squareSide = int(input("Side: "))
-
+            if squareSide <= 0:
+                print("Please enter a positive number")
+                continue
             break
         except:
-            print("Please only enter an wholenumber")
+            print("Please only enter a wholenumber")
 
     square_area = squareSide * squareSide
     square_perimeter = squareSide * 4
@@ -85,11 +100,16 @@ def rec_calculation():
     while True:
         try:
             recWidth = int(input("Width: "))
+            if recWidth <= 0:
+                print("Please enter a positive number")
+                continue            
             recLength = int(input("length: "))
-
+            if recLength <= 0:
+                print("Please enter a positive number")
+                continue
             break
         except:
-            print("Please only enter an wholenumber")
+            print("Please only enter a wholenumber")
 
     rec_area = recWidth * recLength
     rec_perimeter = (recWidth + recLength) * 2
@@ -108,11 +128,16 @@ def par_calculation():
     while True:
         try:
             parHeight = int(input("Height: "))
+            if parHeight <= 0:
+                print("Please enter a positive number")
+                continue            
             parBase = int(input("Base: "))
-
+            if parBase <= 0:
+                print("Please enter a positive number")
+                continue
             break
         except:
-            print("\nPlease only enter an wholenumber \n")
+            print("\nPlease only enter a  wholenumber \n")
 
     par_area = parHeight * parBase
     par_perimeter = (parHeight + parBase) * 2
