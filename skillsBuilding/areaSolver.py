@@ -66,8 +66,6 @@ def triangle_calculation():   #calculates triangle area and perimeter and save a
     triangle_perimeter_list.append(triangle_perimeter)
 
 
-    input("Press Enter to continue...")
-
             
 
 def circle_calculation(): #calculates circle area and circumference and save answers into lists for later
@@ -100,9 +98,6 @@ def circle_calculation(): #calculates circle area and circumference and save ans
     circle_area_list.append(circle_area)
     circumference_list.append(circumference)
 
-    
-
-    input("\nPress Enter to continue...")
 
 def square_calculation(): #calculates square area and perimeter and save answers into lists for later
     print("Please enter all dimensions in cm \n")
@@ -132,8 +127,6 @@ def square_calculation(): #calculates square area and perimeter and save answers
     square_area_list.append(square_area_list)
     square_perimeter_list.append(square_perimeter_list)
 
-    
-    input("Press Enter to continue...")
 
 def rec_calculation(): #calculates rectangle area and perimeter and save answers into lists for later
     print("\nPlease enter all dimensions in cm \n")
@@ -166,8 +159,7 @@ def rec_calculation(): #calculates rectangle area and perimeter and save answers
 
     rectangle_area_list.append(rec_area)
     rectangle_perimeter_list.append(rec_perimeter)
-    
-    input("\nPress Enter to continue...")
+
 
 def par_calculation(): #calculates parallelogram area and perimeter and save answers into lists for later
     print("\nPlease enter all dimensions in cm \n")
@@ -201,12 +193,13 @@ def par_calculation(): #calculates parallelogram area and perimeter and save ans
     parallelogram_perimeter_list.append(par_perimeter)
     parallelogram_area_list.append(par_area)
 
-    input("\nPress Enter to continue...")
 
 while True:
     print("\nArea and perimeter solver \n")
+    print("This is a area and perimeter calculator for the following shapes ")
     print("Please choose by entering one of the following choices \n")
-    print("Triangle \nCircle \nSquare \nRectangle \nParallelogram \nFinish Calculation \n")
+    print("Triangle \nCircle \nSquare \nRectangle \nParallelogram \n")
+    print("If you wish to end the program, please enter 'Finish calculation' \n")
     
     choice = input("Please enter your choice here: ")
     choice = choice.lower()
